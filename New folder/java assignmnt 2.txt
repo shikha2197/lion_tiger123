@@ -1,0 +1,79 @@
+import java.util.Random;
+
+public class First{
+	
+	Public static void main(string []args)
+
+	for( i =1; i<1; i++){
+	Jungle.RunGame();
+	Jungle.DoCompetition();
+	Jungle.ReportOnWinner();
+	}
+}
+
+Class Jungle{
+	static Lion[] lions;
+	static Tiger[] tiggers;
+
+	public static int NumberOfLionWinners = 0;
+	public static int NumberOfTigerWinners = 0;
+
+	public static void RunGame(){
+	lions = new Lion[10];
+	tigers = new Tiger[10];
+
+	for(int i=0; i<10; i++){
+	lions[i]= new Lion();
+	tigers[i] =new Tiger();
+	}
+
+}
+
+Public static void DoCompetition(){
+	NumberofLionWinners = 0;
+	NumberofTigerWinners=0;
+
+	for(int i=0; i<10; i++){
+	if(lions[i].getStrength() > (tigers[i].getStrength) ){
+		Jungle.NumberOfLionWinners++;
+	}
+	else{
+	Jungle.NumberOfTigerWinners++;
+	}
+	}
+
+if(NumberOfLionWinners > NumberOfTigerWinners){
+	int a= NumberOfLionWinners;
+	int b = NumberOfTigerWinners;
+	NumberOfLionWinners = b;
+	NumberOfTigerWinners = a;
+}
+
+if(NumberOfLionWinners == NumberOfTigerWinners){
+	NumberOfLionWinners -=2;
+	NumberOfTigerwinners += 2;
+}
+
+}
+
+class Lion extends Feline{
+	public Lion(){
+	setStrength();
+	}
+	public void setStrength()
+	{
+	Random rand = new Random();
+	this.strength = rand.nextInt(100);
+	}
+}
+
+class Tiger extends Feline{
+	public Tiger(){
+	setStrength();
+	}
+
+	public voic setStrength(){
+	Random rand = new Random();
+	this.strength = rand.nextInt(100);
+	}
+}
